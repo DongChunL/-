@@ -1,0 +1,40 @@
+
+    /*外层div*/
+.input-file-box{
+    margin-top: 2px;
+    border: 1px solid gray;
+    width: 100px!important;
+    height: 24px;
+    position: relative;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(181,230,29);
+    display: inline-block;
+    vertical-align: top;
+}
+/*文字描述*/
+.input-file-box > span{
+    display: block;
+    width: 100px;
+    height: 24px;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: gray;
+    line-height: 24px;
+    text-align: center;
+}
+/*input框*/
+.input-file-box #uploadfile{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+    #img-box div{
+        display: inline-block;
+        vertical-align: top;
+    }

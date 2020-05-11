@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>房屋租赁网站 - 注册</title>
+	<link rel="stylesheet" type="text/css" href="../css/register.css">
+	<script type="text/javascript" src="../js/login.js"></script>
+	<script type="text/javascript" src="../js/yanzm.js"></script>
+</head>
+<body>
+<div class="login_bg">
+	<div class="login_logo">
+		<h1>自  行  车  租  赁  网</h1>
+	</div>
+<fieldset>
+		<legend>骑行伴你好心情！</legend>
+		<form action="" method="post" class="form1" onsubmit="checkRegister()">
+		<table border="0" >
+			<tr>
+				<td class="tdFloat"><img src="../image/icons/user.png" class="check_img" alt=""><input type="text" placeholder="用户名" name="userName" id="username" onblur="checkname()"><span id="tipUserName"></span></td>
+			</tr>
+			<tr>
+				<td class="tdFloat"><img src="../image/icons/key.png" class="check_img" alt=""><input type="password" placeholder="密码" name="passwd" id="passwd" onblur="checkpasswd()"><span id="tipPassWord"></span></td>
+			</tr>
+			<tr>
+				<td class="tdFloat"><img src="../image/icons/idCard.png" class="check_img" alt=""><input type="text" placeholder="身份证号码" name="userId" id="userId" onblur="checkUserId()"><span id="tipUserId"></span></td>
+			</tr>
+			<tr>
+				<td class="tdFloat"><img src="../image/icons/phoneA.png" class="check_img" alt=""><input type="text" placeholder="手机号码" name="phone" id="phone" onblur="checkPhone()"><span id="tipPhone"></span></td>
+			</tr>
+			<tr>
+				<td class="tdFloat"><img src="../image/icons/emailA.png" class="check_img" alt=""><input type="text" placeholder="邮箱" name="email" id="email" onblur="checkEmail()"><span id="tipEmail"></span></td>
+			</tr>
+			<tr>
+				<td class="tdFloat"><img src="../image/icons/checkD.png" class="check_img" alt=""><input type="text" id="code_input" value="" placeholder="请输入验证码"/><div id="v_container" style="width: 110px;height: 46px;"></div><div style="clear: both;"></div></td><!--<button id="my_button">验证</button>-->
+			</tr>
+			<tr>
+				<td style="text-align: center"><span  id="tipInfo" style="color: red;text-align: center"></span></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="rbButton"><a  name="register" id="register" onclick="checkRegister()">注册</a><br><input type="button" name="back" id="backout" value="返回" onclick="window.location.href='login.php'"/></td>
+			</tr>
+		</table>
+	</form>
+</fieldset>
+</div>
+<script>
+	/*验证码*/
+	new GVerify("v_container");
+/*	var verifyCode = new GVerify("v_container");
+	document.getElementById("submit").onclick = function(){
+		var res = verifyCode.validate(document.getElementById("code_input").value);
+		if(!res){
+			alert("验证码错误");
+		}
+	}*/
+</script>
+<script src="../js/clearInputHistory.js"></script>
+<script>
+</script>
+</body>
+</html>

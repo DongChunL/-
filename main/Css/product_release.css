@@ -1,0 +1,89 @@
+body{margin:0px;padding:0px;font-size:12px;color:#666;}
+ul,li,p,h1,h2,h3,h4,h5{padding:0px;margin:0px;}
+h5{line-height:25px;color:#EA6918;font-size:14px;padding-left:20px;}
+h4{color:#009900;line-height:25px;font-weight:normal;background:url(images/icon.gif) left no-repeat;padding-left:10px;font-size:13px;}
+h3{font-size:14px;font-weight:bold;width:100%;text-align:center;line-height:30px;}
+a:link {
+    color: #666;
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color: #666;
+}
+a:hover {
+    text-decoration: underline;
+    color: #FF6600;
+}
+a:active {
+    text-decoration: none;
+}
+.input{border:1px #ccc solid;height:18px;line-height:18px;}
+.inputAuto{border:1px #ccc solid;}
+.contact{border:1px #ccc solid;color:#999;width:192px;height:18px;line-height:18px;}
+.green a:link,.green a:visited{color:#3385D6;text-decoration:none;}
+.colorBlue{color:#0044DD;}
+.colorBlue a:link,.colorBlue a:visited{color:#3385D6;text-decoration:underline;}
+.colorBlue a:hover{color:#ff6600;text-decoration:underline;}
+.select{color:#009900;font-size:14px;font-weight:bold;}
+a.colorBlue{color:#0044DD;text-decoration:underline;}
+.explanation{color:#999;}
+.colorRed{color:#ff6600;}
+.topBg{width:100%;height:68px;background:url(images/top_bg.jpg) repeat-x;}
+.top{width:950px;height:68px;margin:0px auto;}
+.topLeft{float:left;}
+.topRight{float:right;width:340px;line-height:68px;text-align:center;}
+.mainBorder{width:942px;margin:0px auto;height:auto;}
+.borderTxt{/*background:url(images/borderTxt.jpg) repeat-x;*//*border-top:1px #D1E9C2 solid;*/color:#71A350;font-size:14px;font-weight:bold;}
+.newFlow{height:50px;line-height:50px;font-size:14px;width:950px;margin:0px auto;}
+.newFlow img{vertical-align:text-bottom;}
+.classTop{width:950px;background:url(images/class_top.jpg) no-repeat;height:29px;}
+.writeTop{width:950px;background:url(images/con_top.jpg) no-repeat;height:29px;color:#fff;}
+.writeContact{width:950px;background:url(images/contact_top.jpg) no-repeat;height:29px;color:#fff;}
+.classMid{width:950px;border-left:1px #ccc solid;border-right:1px #ccc solid;border-bottom:1px #ccc solid;margin-bottom:20px;}
+.writeMid{margin-bottom:20px;width:948px;border-left:1px #A4D48E solid;border-right:1px #A4D48E solid;border-bottom:1px #A4D48E solid;height:auto;}
+.writeCon{margin-bottom:20px;width:948px;border-left:1px #FFAC59 solid;border-right:1px #FFAC59 solid;border-bottom:1px #FFAC59 solid;height:auto;}
+.bigClass{width:90%;line-height:25px;font-size:14px;font-weight:bold;background:#EFEFEF;padding-left:3px;color:#000;}
+.smallClass{list-style:none;}
+.smallClass li{line-height:25px;font-size:14px;padding-left:5px;}
+.selectCity{width:94%;height:40px;margin:10px auto 10px auto;border:1px #ccc solid;background:#F7F7F7;;padding-left:10px;}
+.songhuo{border:1px #ccc solid;padding:10px;}
+#tgTitle{background:url(images/tgTxtBg.jpg) no-repeat;width:457px;line-height:28px;color:#fff;padding-left:10px;font-weight:bold;}
+#tgBorder{border:1px #A4D48E solid;height:auto;width:455px;}
+#tgFoot{background:#F5FDF0;height:30px;padding-top:5px;padding-left:20px;}
+.addCity{border:1px #999 solid;background:#F8F8F8;height:123px;padding:8px;margin-bottom:10px;margin-top:5px;}
+.uploadStyle{border:1px #ccc solid;width:94%;background:#fff;height:auto;padding:10px 10px 0px 10px;margin:10px 0px 10px 0px;}
+.imgList{float:left;width:185px;height:73px;margin-bottom:10px;}
+.imgList img{border:1px #ccc solid;margin-right:8px;}
+.backTop a:link,.backTop a:visited{font-size:12px;text-decoration:underline;color:#009900;font-weight:normal;}
+/*提示信息*/
+#alertBox{background:#ECF9FF;margin:auto;height:156px;width:350px;text-align:left;border:1px solid #B4E6FF;}
+#alertBox h5{padding-left:30px;}
+#alertBox img{cursor:pointer;}
+.msgCon{padding-left:30px;}
+.msgSubmit{width:100%;text-align:center;padding-top:10px;
+}
+.close{width:340px;text-align:right;padding-top:5px;padding-right:10px;}
+#alertBtn{text-align:center;}
+.black_overlay{
+    display:none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 610px;
+    background-color: gray;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=20);
+}
+.white_content {
+    position:absolute;
+    left:364px;
+    top:1246px;
+    width:419px;
+    height:185px;
+    z-index:1;
+    background-color: #FFFFFF;		}
+/*end*/

@@ -1,0 +1,304 @@
+<?php
+include '../model/head.php';
+include '../../sql/phpConnectDb.php';
+/*$PHP_SELF=$_SERVER['PHP_SELF'];
+
+$url='http://'.$_SERVER['HTTP_HOST'].substr($PHP_SELF,0,strrpos($PHP_SELF,'/')+1);*/
+/*$url='http://'.$_SERVER['HTTP_HOST'];
+echo $url;*/
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>用户中心</title>
+    <link  rel="stylesheet" type="text/css" href="css/admincss.css">
+    <link  rel="stylesheet" type="text/css" href="../Css/head.css">
+</head>
+<body>
+<form method="post" action="#" id="form1">
+    <div>
+        <table class="main" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="190" valign="top">
+                    <table width="178" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                            <td class="left_border" valign="top">
+
+                                <div>
+                                    <a href="#">
+                                        <img src="image/admin_Home.jpg" alt="" border="0"></a></div>
+                                <table id="usermenu" width="178" cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            <table class="left " width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                <tbody>
+                                                <tr onclick="showMenu('a2',event)">
+                                                    <th class="LeftTdBg2 hand" style="height: 23px; text-align: left;">
+                                                        我是出租方
+                                                    </th>
+                                                </tr>
+                                                <tr id="a2" style="display: none;">
+                                                    <td align="left">
+                                                        <table style="width: 100%;" cellspacing="0" cellpadding="2" border="0">
+                                                            <tbody><tr>
+                                                                <td>
+                                                                    <a id="ContentPlaceHolder1_Left1_HyperLink1" href="Product_Public1.aspx?cityid=0000">我要出租</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a collinks="manger_online.aspx,manger_offline.aspx,mangerChecking.aspx" href="../User/manger_online.aspx">
+                                                                        出租物品管理</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/czorder.aspx" collinks="czorder.aspx,SelfRentRecordOk.aspx,czNoorder.aspx,czRead.aspx,czSend.aspx,czSuccess.aspx">
+                                                                        我收到的订单</a>
+                                                                </td>
+
+                                                            </tr><tr>
+                                                                <td>
+                                                                    <a href="../User/myLessor.aspx" collinks="myLessor.aspx,czorder.aspx,SelfRentRecordOk.aspx,czNoorder.aspx,czRead.aspx,czSend.aspx,czSuccess.aspx">
+                                                                        我的报价</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/OrderMyLessor.aspx" collinks="OrderMyLessor.aspx,czorder.aspx,SelfRentRecordOk.aspx,czNoorder.aspx,czRead.aspx,czSend.aspx,czSuccess.aspx">
+                                                                        报价订单</a>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody></table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="left" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                <tbody>
+                                                <tr onclick="showMenu('a1',event)">
+                                                    <th class="LeftTdBg hand" style="text-align: left;">
+                                                        我是求租方&nbsp;
+                                                    </th>
+                                                </tr>
+                                                <tr id="a1" style="display: none;">
+                                                    <td align="left">
+
+
+                                                        <table style="width: 100%;" cellspacing="0" cellpadding="2" border="0">
+                                                            <tbody><tr>
+                                                                <td>
+                                                                    <a id="ContentPlaceHolder1_Left1_HyperLink2" collinks="qiuzusort.aspx" href="http://rentin.zulinbao.com/enquiry.aspx">发布求租</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/manageenquiry.aspx" collinks="manageenquiry.aspx">租赁管理</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/manageenlessor.aspx" collinks="manageenlessor.aspx">租赁历史</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/OrderLessor.aspx" collinks="OrderLessor.aspx">订单管理</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/orderadmin.aspx" collinks="orderadmin.aspx">历史订单</a>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="left" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                <tbody>
+                                                <tr onclick="showMenu('a3',event)">
+                                                    <th class="LeftTdBg2 hand" style="text-align: left;">
+                                                        <div>
+                                                            租币/余额</div>
+                                                    </th>
+                                                </tr>
+                                                <tr id="a3" style="display: none;">
+                                                    <td style="height: 63px" align="left">
+                                                        <table class="left_boder" style="width: 100%;" cellspacing="0" cellpadding="2" border="0">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/myZubi.aspx" collinks="myZubi.aspx,netpay.aspx,moneyCz.aspx,applywithdraw.aspx,cashRecord.aspx,czRecord.aspx,moneyrecords.aspx,InZubi.aspx,exchange.aspx">
+                                                                        我的租币</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/myAcount.aspx" collinks="integralindetail.aspx,integraloutdetail.aspx,subJf.aspx,myAcount.aspx,czMoney.aspx,usermoneyrecords.aspx,applywithm.aspx,InMoney.aspx">
+                                                                        我的账户</a>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody></table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="left" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                <tbody>
+                                                <tr onclick="showMenu('a5',event)">
+                                                    <th class="LeftTdBg2 hand" style="text-align: left;">
+                                                        消息/留言管理
+                                                    </th>
+                                                </tr>
+                                                <tr id="a5" style="display: none;">
+                                                    <td align="left">
+                                                        <table style="width: 100%;" cellspacing="0" cellpadding="2" border="0">
+                                                            <tbody><tr>
+                                                                <td>
+                                                                    <a href="../User/My_Message.aspx" collinks="My_Message.aspx,My_SysInfo.aspx,SysInfo_Show.aspx,Message_Show.aspx">
+                                                                        系统信息</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/myshopsleavemessage.aspx" collinks="myshopsleavemessage.aspx,shopsleavemessage.aspx,mybackmsg.aspx,Show_Back.aspx,update_back_message.aspx">
+                                                                        我的留言</a>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody></table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="left" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                <tbody>
+                                                <tr onclick="showMenu('a16',event)">
+                                                    <th class="LeftTdBg2 hand" style="text-align: left;">
+                                                        租赁问答
+                                                    </th>
+                                                </tr>
+                                                <tr id="a16" style="display: none;">
+                                                    <td align="left">
+                                                        <table style="width: 100%;" cellspacing="0" cellpadding="2" border="0">
+                                                            <tbody><tr>
+                                                                <td>
+                                                                    <a href="../User/woyaowen.aspx" target="_blank" collinks="woyaowen.aspx">我要提问</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/my_ask.aspx" collinks="my_ask.aspx">我的提问</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/my_answer.aspx" collinks="my_answer.aspx">我的回答</a>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody></table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="left" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                <tbody>
+                                                <tr onclick="showMenu('a6',event)">
+                                                    <th class="LeftTdBg2 hand" style="text-align: left;">
+                                                        基本设置
+                                                    </th>
+                                                </tr>
+                                                <tr id="a6" style="display: none;">
+                                                    <td align="left">
+                                                        <table style="width: 100%;" cellspacing="0" cellpadding="2" border="0">
+                                                            <tbody><tr>
+                                                                <td>
+                                                                    <a href="../User/User_info.aspx" collinks="User_info.aspx">个人信息</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../User/setpasssafe.aspx" collinks="setpasssafe.aspx">修改密码</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="../Logout.aspx">安全退出</a>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody></table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody></table>
+                    <script type="text/javascript">
+                        function showMenu(objStr, e) {
+                            var ob = e.srcElement || e.target;
+
+                            if (ob.tagName == "TD") {
+                                ob = ob.parentNode.childNodes[1].childNodes[0];
+                            }
+                            if (ob.tagName == "A") {
+                                ob = ob.parentNode.childNodes[1].childNodes[0];
+                            }
+                            var obj = document.getElementById(objStr);
+                            if (obj.style.display == "") {
+                                obj.style.display = "none";
+                                //ob.src ="images/ad.gif";
+                            }
+                            else {
+                                obj.style.display = "";
+                                //ob.src = "images/ad.gif";
+                            }
+                        }
+                        function change_bgcolor(obj, val) {
+                            obj.className = val;
+                        }
+                        function showlist() {
+                            var sUrl = location.pathname;
+                            var sName = sUrl.substring(sUrl.lastIndexOf("/") + 1).toLowerCase();
+                            var arrLinks = document.getElementById("usermenu").getElementsByTagName("a");
+                            var oLink = null, sLink = "";
+                            for (var i = 0; i < arrLinks.length; i++) {
+                                oLink = arrLinks[i];
+
+                                if (oLink.attributes["collinks"] != null) {
+                                    sLink = oLink.attributes["collinks"].value;
+                                    var arrtargets = sLink.split(",");
+                                    for (var j = 0; j < arrtargets.length; j++) {
+                                        if (arrtargets[j].toLowerCase() == sName) {
+                                            oLink.style.background = "#EBFBE3";
+                                            oLink.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.style.display = "";
+                                            return;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        showlist();
+                    </script>
+                </td>
+                <!--右部-->
+                <td width="742" valign="top">
+
+                </td>
+            </tr>
+            </tbody></table>
+    </div>
+</form>
+</body>
+<?php
+include '../model/footer.html';
+?>
+</html>

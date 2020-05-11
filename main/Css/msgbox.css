@@ -1,0 +1,20 @@
+#mask{ background-color: #666;width: 100%;height: 100%;left:0;top:0;/*FF IE7*/filter:alpha(opacity=60);/*IE*/opacity:0.6;/*FF*/z-index:1;
+    position:fixed!important;/*FF IE7*/position:absolute;/*IE6*/ _top:expression(eval(document.compatMode &&  document.compatMode=='CSS1Compat') ?  documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/display:none;}
+.browseName{font-size:16px;font-weight:bold;color:#000;line-height:35px;padding-left:10px;}
+.browseList{padding:0px;margin:0px;}
+p{padding:0px;margin:0px;}
+.browseList li{list-style:none;float:left;display:block;padding:8px 0px 8px 0px;font-size:14px;border-bottom:1px #DCEED0 dashed;}
+.browseTxt{width:30%;text-align:right;padding-left:0px;}
+.browseCon{width:70%;color:#333;}
+.listInfo td{line-height:1.7;font-size:14px;}
+.listInfo {border-right:1px #DCEED0 solid;}
+.mainBorder1{background:#DCEED0;}
+.spanH{height:10px;line-height:10px;}
+.infoTxt{font-size:14px;padding-left:10px;border-bottom:1px #ccc dashed;font-weight:bold;color:#000;}
+.infoCon{padding:10px;line-height:2;font-size:14px;}
+.infoCon img{padding-right:10px;}
+.massageBox{position:absolute; left:13%; top:5%;width: 74%;height:auto; z-index:2;display:none;border:2px #68995A solid; background:#fff;overflow:hidden;}
+.browse a:link{color:Blue;}
+.browse a:visited{color:Blue;}
+.browse a:hover{color:#ff3300;}

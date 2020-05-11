@@ -1,0 +1,130 @@
+body{
+	margin: 0 auto;
+	font-family: "Arial";
+	background:url("../images/bikeBackgroundA.jpg") repeat-x;
+	scroll-behavior: none;
+	overflow:hidden;
+}
+
+a{
+	text-decoration: none;
+	font-size: 16px;
+	color: grey;
+}
+a:hover{
+	color: red;
+}
+.aside{
+	margin-top: 60px;
+}
+/*
+.login_bg{
+	margin: 0 auto;
+	background:url("../image/login-bg.jpg") repeat-x;
+	width:100%;
+	height:800px;
+}*/
+
+#admin{
+	display:inline-block;
+	float:right;
+}
+
+.form1{
+	width: 100%;
+	height: 100%;
+	margin:0 auto;
+}
+h1{
+	text-align: center;
+	font-size: 60px;
+	color:grey;
+	margin:0 auto;
+	height:100px;
+	line-height: 100px;
+}
+table{
+	margin-top: 10px;
+	width: 100%;
+}
+table, tr, td{
+	border: 0;
+}
+.tdFloat{
+	background-color: white;
+	border-bottom: 1px solid #ebebeb;
+	width: 90%;
+}
+input{
+	height: 40px;
+	width: 200px;
+	font-size: 20px;
+	background-color: white ;
+	border: 0;
+	outline-style: none;
+}
+input::placeholder{
+	font-size: 20px;
+}
+#register{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	background-color: #00EE00;
+	color:white;
+	border:0px;
+	display: inline-block;
+	text-align: center;
+	margin-top: 10px;
+}
+#register:hover{
+	cursor:pointer;
+	background-color: #00CD00;
+}
+fieldset{
+	width:450px;
+	height:445px;
+	margin-top: 120px;
+	margin-left: 1200px;
+	border:2px solid rgb(255,251,240);
+	background-color: white;
+	position: absolute;
+}
+legend{
+	color:lawngreen;
+	background-color: rgb(241,249,249);
+}
+span[id^="tip"]{
+	color: red;
+}
+img[class$='_img']{
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	margin-bottom: 5px;
+	margin-right: 2px;
+}
+#backout{
+	background-color: #CDC8B1;
+	color:white;
+	border:0px;
+	text-align: center;
+	margin-top: 15px;
+}
+.rbButton{
+	text-align: center;
+}
+#backout:hover{
+	background-color:darkgrey;
+}
+#backout:hover,#register:hover{
+	cursor:pointer;
+}
+#v_container{
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	width: 82px;
+	height: 38px;
+}

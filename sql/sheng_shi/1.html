@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <style type="text/css">
+        h2{
+            text-align:center;
+            color:red;
+        }
+        .div{
+            width:500px;
+            height:300px;
+            border:1px solid gray;
+            margin:auto;
+            text-align:center;
+            padding-top:30px;
+        }
+        .div select{
+            width:80px;
+            height:25px;
+            color:green;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function deal(value,next){
+            var Next=document.getElementById(next);//Next = [object HTMLSelectElement]
+            //删除节点
+            var oP=Next.getElementsByTagName("option");
+            for(var i=oP.length-1;i>=1;i--){
+                oP[i].parentNode.removeChild(oP[i]);
+            }
+
+
+            //创建ajax引擎
+            var xmlhttp="";
+            if(window.XMLHttpRequest){
+                xmlhttp=new XMLHttpRequest();
+            }else{
+                xmlhttp=new ActiveXObject("Microsoft.XMLHttp");
+            }
+
+            //判断状态是否满足条件
+            xmlhttp.onreadystatechange=function(){
+                if(xmlhttp.readyState==4&&xmlhttp.status==200){
+                    var val=xmlhttp.responseText;
+//             alert(val);
+                    var object=eval("("+val+")");
+                    for(var k in object){
+                        //创建节点
+                        var oPt=document.createElement("option");
+                        //添加属性和值
+                        oPt.setAttribute('value',object[k]['name']);
+                        Next.appendChild(oPt);
+                        oPt.innerHTML=object[k]['name'];
+                    }
+                }
+            }
+            var url="deal.php";
+            var data="name="+value;
+            //打开
+            xmlhttp.open("post",url,true);
+
+            xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");//必须加上
+            //发送数据
+            xmlhttp.send(data);
+        }
+
+        window.onload=function(){
+
+            deal(null,"sheng");
+        }
+    </script>
+</head>
+<body>
+<h2>省市联动AJAX实现</h2>
+<div class="div">
+    <form action="deal.php" method="post">
+        <!-- 省级标签 -->
+        <select name="sheng" id="sheng" onchange="deal(this.value,'shi')">
+            <option>省</option>
+        </select>
+
+        <!-- 市级标签 -->
+        <select name="shi" id="shi" onchange="deal(this.value,'xian')">
+            <option>市</option>
+        </select>
+
+        <!-- 县级标签 -->
+        <select name="xian" id="xian" onchange="deal(this.value,'zhen')">
+            <option>县</option>
+        </select>
+
+        <!-- 镇级标签 -->
+        <select name="zhen" id="zhen">
+            <option>镇</option>
+        </select>
+        <input type="submit" value="提交"/>
+    </form>
+</div>
+</body>
+</html>

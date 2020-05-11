@@ -1,0 +1,56 @@
+/*footer*/
+footer{
+    background: darkslategrey;
+    width: 100%;
+    height: 97px;
+}
+.footerTop{
+    height: 34px;
+    text-align: center;
+}
+.footerTop li{
+    display: inline;
+    height: 34px;
+    width: 60px;
+}
+.footerTop li a{
+    font-size: 12px;
+    line-height: 34px;
+    color: white;
+    margin: 0 10px;
+}
+.footerBottom{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: dimgrey;
+}
+.footerBottom a{
+    color: dimgrey;
+}
+footer a:hover{
+    color: orange;
+}
+
+
+/*页面底部自由*/
+/*
+    当页面内容高度小于屏幕高度时，Footer固定在屏幕底部；
+    当页面内容高度大于屏幕高度时，Footer固定在页面底部，即：跟随在内容尾部，滚动条到最底部时看到。
+
+*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 97px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 97px;
+}

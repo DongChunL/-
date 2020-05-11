@@ -1,0 +1,134 @@
+body{
+	margin: 0 auto;
+	font-family: "Arial";
+	background:url("../image/Bikes/bicycle_wall_sports_120826_2560x1440.jpg");
+	background-size: cover;
+	scroll-behavior: none;
+	overflow:hidden;
+}
+
+a{
+	text-decoration: none;
+	font-size: 16px;
+	color: grey;
+}
+a:hover{
+	color: red;
+}
+.aside{
+	margin-top: 107px;
+}
+/*
+.login_bg{
+	margin: 0 auto;
+	background:url("../image/login-bg.jpg") repeat-x;
+	width:100%;
+	height:800px;
+}*/
+
+#admin{
+	display:inline-block;
+	float:right;
+}
+
+.form1{
+	width: 100%;
+	height: 100%;
+	margin:0 auto;
+}
+h1{
+	text-align: center;
+	font-size: 60px;
+	color:grey;
+	margin:0 auto;
+	height:100px;
+	line-height: 100px;
+}
+table{
+	margin-top: 10px;
+	width: 100%;
+}
+table, tr, td{
+	border: 0;
+}
+.tdFloat{
+	background-color: white;
+	border-bottom: 1px solid #ebebeb;
+	width: 90%;
+}
+input{
+	height: 40px;
+	width: 200px;
+	font-size: 20px;
+	background-color: white;
+	border: 0;
+	outline-style: none;
+}
+input::placeholder{
+	font-size: 20px;
+}
+#submit{
+	background-color: rgb(0, 191, 255);
+	color:white;
+	border: 0;
+	display: inline-block;
+	margin-top: 10px;
+}
+#register:hover,#submit:hover{
+	cursor: pointer;
+}
+#submit:hover{
+	background-color: rgb(0, 160, 255);
+}
+#register{
+	background-color: #00EE00;
+	color:white;
+	border:0px;
+	display: inline-block;
+	margin-top: 15px;
+}
+#register:hover{
+	background-color: #00CD00;
+}
+.login_logo{
+	height: 100px;
+}
+fieldset{
+	width:450px;
+	margin-top: 120px;
+	margin-left: 1200px;
+	border:2px solid rgb(255,251,240);
+	background-color: white;
+	position: absolute;
+}
+legend{
+	color:lawngreen;
+	background-color: rgb(241,249,249);
+}
+#v_container{
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	width: 82px;
+	height: 38px;
+}
+span[id^="tip"]{
+	color: red;
+}
+img[class$='_img']{
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	margin-bottom: 5px;
+	margin-right: 2px;
+}
+.srButton{
+	text-align: center;
+}
+#v_container{
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	width: 82px;
+	height: 38px;
+}

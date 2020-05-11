@@ -1,0 +1,37 @@
+/*nav*/
+nav{
+    width: 100%;
+    background: darkslategrey;
+    height: 60px;
+}
+nav li{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    height: 56px;
+    line-height: 61px;
+    /* margin-top: 2px; */
+    padding-right: 15px;
+    padding-left: 15px;
+}
+/*        nav li:last-child{
+            background-color: red; !* 浏览器不支持时显示 *!
+            background-image: linear-gradient(#ffffff, #ff0000);
+        }*/
+nav li a{
+    color: white!important;
+    font-size: 22px!important;
+    height: 36px;
+    line-height: 36px;
+    width: 80px;
+    font-weight: bold;
+}
+/*nav ul li:nth-child(7){
+    background: white;
+}
+nav ul li:nth-child(7) a{
+    color: darkgreen!important;
+}*/
+nav a:hover{
+    color: yellow!important;
+}
